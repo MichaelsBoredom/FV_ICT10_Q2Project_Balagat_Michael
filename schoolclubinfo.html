@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <title>School Clubs</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Merriweather', serif;
+        }
+        .navbar {
+            background-color: maroon;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(128, 0, 0, 0.85); /* Semi-transparent overlay */
+            z-index: 1;
+        }
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white;
+            color: maroon;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn {
+            background-color: maroon;
+            color: white;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: darkred;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            color: maroon;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">Metropolitan University of Caloocan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="studentgradecalc.html">Grade Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schoolclubinfo.html">Clubs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Explore Our School Clubs</h1>
+        <p>Engage, Learn, and Grow</p>
+    </div>
+    <div class="container">
+        <h1 class="text-center">School Clubs</h1>
+        <p class="text-center">Select a club to view its details.</p>
+        <label for="club-select" class="form-label">Choose a club:</label>
+        <select id="club-select" class="form-select">
+            <option value="none" selected disabled>Select a club</option>
+            <option value="marching_band">Marching Band</option>
+            <option value="glee_club">Glee Club</option>
+            <option value="dance_club">Dance Club</option>
+            <option value="math_club">Math Club</option>
+            <option value="science_club">Science Club</option>
+            <option value="communications_arts_club">Communications Arts Club</option>
+            <option value="cocc">COCC (Cadet Officer Candidate Course)</option>
+            <option value="social_studies_club">Social Studies Club</option>
+            <option value="volleyball_varsity">Volleyball Varsity</option>
+            <option value="basketball_varsity">Basketball Varsity</option>
+        </select>
+        <br>
+        <button class="btn" py-click="display_club_info">Show Club Information</button>
+        <pre id="club.info"></pre>
+        <div id="output"></div>
+    </div>
+    <script type="py" src="club.py"></script>
+</body>
+</html>

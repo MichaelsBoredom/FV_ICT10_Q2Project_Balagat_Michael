@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <title>Student Grade Calculator</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Merriweather', serif;
+        }
+        .navbar {
+            background-color: maroon;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white;
+            color: maroon;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn {
+            background-color: maroon;
+            color: white;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: darkred;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            color: maroon;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">Metropolitan University of Caloocan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="studentgradecalc.html">Grade Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schoolclubinfo.html">Clubs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">Student Grade Calculator</h1>
+        <form>
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" id="first_name" class="form-control">
+            <br>
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" id="last_name" class="form-control">
+            <br>
+            <h2>Enter your grades:</h2>
+            <label for="science" class="form-label">Science</label>
+            <input type="text" id="science" class="form-control">
+            <br>
+            <label for="math" class="form-label">Math</label>
+            <input type="text" id="math" class="form-control">
+            <br>
+            <label for="english" class="form-label">English</label>
+            <input type="text" id="english" class="form-control">
+            <br>
+            <label for="filipino" class="form-label">Filipino</label>
+            <input type="text" id="filipino" class="form-control">
+            <br>
+            <label for="pe" class="form-label">PE</label>
+            <input type="text" id="pe" class="form-control">
+            <br>
+            <label for="ict" class="form-label">ICT</label>
+            <input type="text" id="ict" class="form-control">
+            <br>
+            <button class="btn" py-click="general_weighted_average">Calculate GWA</button>
+        </form>
+        <h3 id="student_info"></h3>
+        <h4 id="summary"></h4>
+        <h4 id="output"></h4>
+    </div>
+    <script type="py" src="main.py"></script>
+</body>
+</html>

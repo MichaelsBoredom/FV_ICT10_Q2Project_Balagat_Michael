@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Metropolitan University of Caloocan</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Merriweather', serif;
+        }
+        .navbar {
+            background-color: maroon;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 0, 0, 0.85); 
+            z-index: 1;
+        }
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        .content {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+        .content h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: maroon;
+        }
+        .content p {
+            font-family: 'Merriweather', serif;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Metropolitan University of Caloocan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="studentgradecalc.html">Grade Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schoolclubinfo.html">Clubs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Metropolitan University of Caloocan</h1>
+        <p>Leading the way in quality learning since 2025.</p>
+    </div>
+    <div class="content">
+        <h2>About Our School</h2>
+        <p>Metropolitan University of Caloocan is a high-ranking school that primarily focuses on the education of the young and the production of the future leaven. With this field, we are more than thirty years old and still, we are very proud of our tradition of academic excellence as well as holistic development.</p>
+        <p>It is the partnership of our top-notch facilities, very capable teachers, and innovative curriculum that helps students to shine not only in academics but also in the areas of social and emotional growth.</p>
+    </div>
+</body>
+</html>
